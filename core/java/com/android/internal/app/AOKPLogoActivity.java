@@ -66,7 +66,7 @@ public class AOKPLogoActivity extends Activity {
         tv.setTextSize(1.25f*size);
         tv.setTextColor(0xFFFFFFFF);
         tv.setShadowLayer(4*metrics.density, 0, 2*metrics.density, 0x66000000);
-        tv.setText("Android Open Kang Project");
+        tv.setText("The Orca Project");
         view.addView(tv, lp);
 
         tv = new TextView(this);
@@ -91,7 +91,7 @@ public class AOKPLogoActivity extends Activity {
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
         mContent = new ImageView(this);
-        mContent.setImageResource(com.android.internal.R.drawable.aokplogo_alt);
+        mContent.setImageResource(com.android.internal.R.drawable.orcalogo_alt);
         mContent.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
 
         final int p = (int)(32 * metrics.density);
@@ -101,7 +101,7 @@ public class AOKPLogoActivity extends Activity {
             @Override
             public void onClick(View v) {
                 mToast.show();
-                mContent.setImageResource(com.android.internal.R.drawable.aokplogo);
+                mContent.setImageResource(com.android.internal.R.drawable.orcalogo);
             }
         });
 
@@ -116,7 +116,7 @@ public class AOKPLogoActivity extends Activity {
                         .addCategory("com.android.internal.category.AOKPLOGO"));
                         //.setClassName("com.android.systemui","com.android.systemui.UnicornSack"));
                 } catch (ActivityNotFoundException ex) {
-                    android.util.Log.e("AOKPLogoActivity", "Couldn't find a sack of unicorns.");
+                    android.util.Log.e("AOKPLogoActivity", "Couldn't find a Shamu.");
                 }
                 finish();
                 return true;
